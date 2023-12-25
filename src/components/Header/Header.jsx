@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 const Head = styled.header`
   display: flex;
@@ -8,6 +7,7 @@ const Head = styled.header`
   font-family: monospace;
   justify-content: space-evenly;
   align-items: center;
+  padding: 1.5em;
 `;
 
 const Navigation = styled.nav`
@@ -23,6 +23,7 @@ const Navigation = styled.nav`
     align-items: center;
     text-decoration: none;
     color: black;
+    font-size: 1.5em;
   }
 
   & a:hover {
@@ -30,29 +31,29 @@ const Navigation = styled.nav`
   }
 `;
 
-const Name = styled.h1`
-  font-size: 2em;
-`;
+
+const navItems = [
+  {
+    name: "Github",
+    href: "https://www.linkedin.com/in/nathan-dinh-8782a6215/",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://github.com/Nathan-Dinh",
+  },
+];
 
 const Header = () => {
   return (
     <Head>
-      <div>
-        <Name>Nathan Dinh</Name>
-      </div>
       <Navigation>
-        <div>
-          <a href="#">
-            <AiFillLinkedin />
-            Linkined
-          </a>
-        </div>
-        <div>
-          <a href="#">
-            <AiFillGithub />
-            GitHub
-          </a>
-        </div>
+        {
+          navItems.map((item) =>{
+            return (<div>
+            <a href={item.href} rel="noopener nofollow">{item.name}</a>  
+            </div>)
+          })
+        }
       </Navigation>
     </Head>
   );
