@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Tile = styled.button`
-  width: 5em;
-  height: 5em;
+  width: 50vw; /* Adjust the multiplier based on your preference */
+  height: 50vw; /* Adjust the multiplier based on your preference */
+  max-width: 6.5rem; /* Set a maximum width if needed */
+  max-height: 6.5rem; /* Set a maximum height if needed */
   border: 3px solid white;
   border-radius: 0.4em;
   font-size: 2.5em;
@@ -13,7 +15,7 @@ const Tile = styled.button`
     color: white;
     background-color: ${(props) => (!props.turn ? "#FE6B6B" : "#6B83FE")};
     border: 1px solid ${(props) => (!props.turn ? "#F90101" : "#0132F9")};
-    cursor:pointer;
+    cursor: pointer;
   }
 `;
 

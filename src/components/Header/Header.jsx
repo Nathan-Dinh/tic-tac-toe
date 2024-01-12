@@ -15,7 +15,7 @@ const Navigation = styled.nav`
 
   & div {
     font-size: 1.5em;
-    padding: 0 2em;
+    padding: 0 1em;
   }
 
   & a {
@@ -31,15 +31,14 @@ const Navigation = styled.nav`
   }
 `;
 
-
 const navItems = [
   {
     name: "Github",
-    href: "https://www.linkedin.com/in/nathan-dinh-8782a6215/",
+    href: "https://github.com/Nathan-Dinh",
   },
   {
-    name: "LinkedIn",
-    href: "https://github.com/Nathan-Dinh",
+    name: "Linkedin",
+    href: "https://www.linkedin.com/in/nathan-dinh-8782a6215/",
   },
 ];
 
@@ -47,13 +46,15 @@ const Header = () => {
   return (
     <Head>
       <Navigation>
-        {
-          navItems.map((item) =>{
-            return (<div>
-            <a href={item.href} rel="noopener nofollow">{item.name}</a>  
-            </div>)
-          })
-        }
+        {navItems.map((item) => {
+          return (
+            <div>
+              <a href={item.href} rel="noopener nofollow">
+                {item.name}
+              </a>
+            </div>
+          );
+        })}
       </Navigation>
     </Head>
   );
