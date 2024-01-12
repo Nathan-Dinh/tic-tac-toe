@@ -1,6 +1,7 @@
 # Tic-Tac-Toe
 
 A simple tic tac toe game created in react vite
+https://tic-tac-toe-rose-one.vercel.app/
 
 ![image](https://github.com/Nathan-Dinh/tic-tac-toe/assets/106849932/0b3346af-4f82-4b68-893f-3dde04f792f6)
 
